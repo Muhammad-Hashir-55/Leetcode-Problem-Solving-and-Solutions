@@ -13,8 +13,10 @@ class Solution:
                 o +=1
                 zeros.append(z)
                 z = 0
+                
         ones.append(o)
         zeros.append(z)
+        
         if(max(ones)<= max(zeros)):
             return False
         else:
