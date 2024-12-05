@@ -16,4 +16,5 @@ class Solution:
             if(len(set(arr)) ==1):
                 return True
         return False
-        
+
+
