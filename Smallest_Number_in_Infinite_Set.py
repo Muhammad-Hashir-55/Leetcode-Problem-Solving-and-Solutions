@@ -2,25 +2,26 @@ class SmallestInfiniteSet:
 
     def __init__(self):
         self.s = set()
-        for i in range(1,1001):
-            self.s.add(i)
-        
+        smallest = 1
 
         
 
     def popSmallest(self) -> int:
-        mini = 999999
-        for i in self.s:
-            if(i <mini):
-                mini = i
-        self.s.remove(mini)
-        return mini
+        a = -1
+        i = 1
+        while(True):
+            if(i not in self.s):
+                a = i
+                break
+            i +=1
+        self.s.add(a)
+        return a
 
-        
         
 
     def addBack(self, num: int) -> None:
-        self.s.add(num)
+        if(num in self.s):
+            self.s.remove(num)
         
         
 
