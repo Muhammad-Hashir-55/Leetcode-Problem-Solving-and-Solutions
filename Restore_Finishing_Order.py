@@ -3,7 +3,7 @@ class Solution:
         ss = set(friends)
         arr = []
         for i in order:
-            if(i in friends):
+            if(i in ss):
                 arr.append(i)
         return arr
         
