@@ -1,0 +1,18 @@
+class Solution:
+    def integerBreak(self, n: int) -> int:
+        if(n ==2):
+            return 1
+        if(n == 3):
+            return 2
+        
+        th = n//3
+        rem = n%3
+
+        if(rem == 1):
+            th -=1
+            rem = 4
+        elif(rem ==0):
+            rem = 1
+        
+        return (3**th) * rem
+        
